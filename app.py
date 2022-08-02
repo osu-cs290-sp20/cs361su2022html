@@ -31,5 +31,6 @@ def send_percent():
         resume = request.get_json()
         resume["id"] = len(resume_arr)
         resume_arr.append(resume)
-        return resume, 201
+        percent = get_percent(resume["id"])
+        return percent, 200
     return
