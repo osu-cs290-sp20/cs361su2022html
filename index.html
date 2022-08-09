@@ -1,7 +1,56 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    hello!
-  </head>
+  <title>
+    Resume Percentage Matcher
+  </title>
+
+  <body>
+    <h1>Resume Matcher</h1>
+
+    <br>
+
+    <h3>Add a Resume</h3>
+
+    <form action="http://127.0.0.1:5000/api/resumes" method="POST">
+      <label for="job">Job Description:</label>
+      <input type="text" id="job" name="job"><br><br>
+      <label for="resume">Resume:</label>
+      <input type="text" id="resume" name="resume"><br><br>
+      <input type="submit" value="calculate percent match">
+    </form>
+
+    <br><br>
+
+    <h3>Show a Match Percentage</h3>
+
+    <form action="http://127.0.0.1:5000/api/resumes" method="GET">
+      <label for="id">ID:</label>
+      <input type="number" id="id" name="id"><br><br>
+      <input type="submit" value="show case (must be a valid ID)">
+    </form>
+
+    <br><br>
+
+    <h3>See All Match Percentages</h3>
+
+    <form action="http://127.0.0.1:5000/api/resumes" method="GET">
+      <input type="submit" value="see all cases">
+    </form>
+
+    <br><br>
+
+    <h3>Find Job Listings</h3>
+
+    <form action="https://swe-jobs.com/api/job/search" method="GET">
+      <p>Title</p>
+      <input type="text" id="title" name="title"><br><br>
+      <p>Company</p>
+      <input type="text" id="company" name="company"><br><br>
+      <p>Location</p>
+      <input type="text" id="location" name="location"><br><br>
+      <input type="submit" value="pull resume">
+    </form>
+
+  </body>
 </html>
